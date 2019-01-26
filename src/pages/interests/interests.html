@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>interests</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content class="card-background-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card (click)="sum('thai')">
+          <img style="height: 120px;" src="http://static.asiawebdirect.com/m/phuket/portals/phuket-com/homepage/cuisine/toptenfood/pagePropertiesImage/top10-thai-food.jpg.jpg" />
+          <div class="card-title">Thai food</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card (click)="sum('japan')">
+          <img style="height: 120px;" src="https://www.insidejapantours.com/csp/jap/insidejapan/images/culturepages/6/slider/1.jpg" />
+          <div class="card-title">Japan food</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card (click)="sum('indian')">
+          <img style="height: 120px;" src="http://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2018/02/FotoJetcoverindianrest.jpg" />
+          <div class="card-title">Indian food</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card (click)="sum('korean')">
+          <img style="height: 120px;" src="https://eatbook.sg/wp-content/uploads/2018/01/Daebak-Korean-Restaurant-flatlay.jpg" />
+          <div class="card-title">Korean food</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card (click)="sum('dessert')">
+          <img style="height: 120px;" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/4/7/0/FNK_Chocolate-Raspberry-Waffle-Cake-H_s4x3.jpg.rend.hgtvcom.966.725.suffix/1491598031537.jpeg" />
+          <div class="card-title">Dessert food</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-footer>
+      <ion-toolbar>
+          <button ion-button block (click)="finish()">finish</button>
+      </ion-toolbar>
+    </ion-footer>
+
+</ion-content>
