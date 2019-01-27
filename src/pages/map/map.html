@@ -1,1 +1,8 @@
-<div id='map'></div> 
+<ion-fab top right>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <button (click)="getCurrentLocation()" ion-fab><ion-icon name="locate"></ion-icon></button>
+      <button ion-fab><ion-icon name="navigate"></ion-icon></button>
+    </ion-fab-list>
+</ion-fab>
+<div id='map'></div>
