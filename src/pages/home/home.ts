@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -11,7 +11,7 @@ export class HomePage {
     {
       "image": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?cs=srgb&dl=burger-chips-dinner-70497.jpg&fm=jpg",
       "avatar": "https://cdn1.thr.com/sites/default/files/imagecache/scale_crop_768_433/2016/04/avatar-hf545-h_2016.jpg"
-      
+
     },
     {
       "image": "https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -29,9 +29,18 @@ export class HomePage {
 
   public intersted;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
     const intersted = localStorage.getItem("intersted").split(",");
     this.intersted = intersted
+  }
+
+  ionViewDidLoad() {
+    const toast = this.toastCtrl.create({
+      message: "You are intersting " + this.intersted,
+      duration: 6000,
+      position: "top"
+    });
+    toast.present();
   }
 
 }
