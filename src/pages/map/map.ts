@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
 import { Geolocation, Geoposition } from 'ionic-native';
 
@@ -13,7 +13,7 @@ export class MapPage {
   Coordinates: any;
   watch: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
   ionViewWillEnter() {
@@ -57,7 +57,12 @@ export class MapPage {
     });
 
 
-    var html = '<ion-card>I am here</ion-card>';
+    var html = `
+    <div>
+      Name: Shi <br />
+      Discount level: 20% <br />
+      Detail: lorem ba ba ba
+    </div>`;
 
     var customPopUp = new mapboxgl.Popup(
       {
