@@ -30,7 +30,7 @@ export class HomePage {
   public intersted;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    const intersted = this.navParams.get("interstedData");
+    const intersted = localStorage.getItem("intersted").split(",");
     this.intersted = intersted
   }
 

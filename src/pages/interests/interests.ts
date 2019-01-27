@@ -29,6 +29,7 @@ export class InterestsPage {
     });
     loading.present()
       .then(() => {
+        localStorage.setItem("intersted", this.intersted + "");
         this.navCtrl.setRoot(TabsPage, { "interstedData" : this.intersted});
       })
       .catch((error) => {

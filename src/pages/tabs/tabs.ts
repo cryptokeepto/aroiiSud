@@ -15,7 +15,5 @@ export class TabsPage {
   tab3Root = ContactPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    const intersted = this.navParams.get("interstedData");
-    this.navCtrl.setRoot(HomePage, { "interstedData" : intersted});
   }
 }
