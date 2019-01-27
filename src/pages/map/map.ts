@@ -84,7 +84,7 @@ export class MapPage {
     };
 
     this.watch = Geolocation.watchPosition(options)
-      .subscribe((position: Geoposition) => {
+    .subscribe((position: Geoposition) => {
         this.Coordinates = position.coords;
         this.executeMap()
       });
